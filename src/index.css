@@ -6,28 +6,28 @@
 
 @layer base {
   :root {
-    /* Industrial color scheme */
-    --industrial-dark: #1a202c;
-    --industrial-gray: #2d3748;
-    --industrial-blue: #2b6cb0;
-    --industrial-light: #4a5568;
-    --industrial-accent: #3182ce;
-    --industrial-metal: #718096;
-    --industrial-white: #f7fafc;
-    --industrial-orange: #dd6b20;
+    /* Industrial color scheme - Light */
+    --industrial-dark: #f8fafc;
+    --industrial-gray: #e2e8f0;
+    --industrial-blue: #60a5fa;
+    --industrial-light: #cbd5e1;
+    --industrial-accent: #3b82f6;
+    --industrial-metal: #94a3b8;
+    --industrial-white: #ffffff;
+    --industrial-orange: #f97316;
 
-    --background: var(--industrial-dark);
-    --foreground: var(--industrial-white);
-    --card: var(--industrial-gray);
-    --card-foreground: var(--industrial-white);
+    --background: var(--industrial-white);
+    --foreground: #1e293b;
+    --card: var(--industrial-dark);
+    --card-foreground: #334155;
     --primary: var(--industrial-blue);
-    --primary-foreground: var(--industrial-white);
+    --primary-foreground: #ffffff;
     --secondary: var(--industrial-light);
-    --secondary-foreground: var(--industrial-white);
-    --muted: var(--industrial-metal);
-    --muted-foreground: #a0aec0;
+    --secondary-foreground: #475569;
+    --muted: var(--industrial-gray);
+    --muted-foreground: #64748b;
     --accent: var(--industrial-accent);
-    --accent-foreground: var(--industrial-white);
+    --accent-foreground: #ffffff;
     --border: var(--industrial-light);
     --input: var(--industrial-gray);
     --ring: var(--industrial-accent);
@@ -42,7 +42,7 @@
 
   body {
     @apply bg-background text-foreground font-roboto;
-    background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
   }
 
   .font-roboto {
@@ -57,34 +57,34 @@
 @layer components {
   .industrial-card {
     @apply bg-card border border-border rounded-lg p-6 shadow-xl;
-    background: linear-gradient(145deg, #2d3748 0%, #1a202c 100%);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
   }
 
   .industrial-btn {
     @apply bg-primary hover:bg-primary/90 text-primary-foreground font-semibold py-3 px-6 rounded-lg transition-all duration-300;
-    box-shadow: 0 4px 15px rgba(43, 108, 176, 0.3);
+    box-shadow: 0 4px 15px rgba(96, 165, 250, 0.3);
   }
 
   .industrial-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(43, 108, 176, 0.4);
+    box-shadow: 0 6px 20px rgba(96, 165, 250, 0.4);
   }
 
   .tech-specs {
-    @apply grid grid-cols-2 gap-4 p-4 bg-industrial-gray/50 rounded-lg border border-industrial-light/30;
+    @apply grid grid-cols-2 gap-4 p-4 bg-white/80 rounded-lg border border-industrial-light;
   }
 
   .spec-item {
-    @apply flex justify-between items-center py-2 border-b border-industrial-light/20 last:border-b-0;
+    @apply flex justify-between items-center py-2 border-b border-industrial-light/50 last:border-b-0;
   }
 
   .hero-gradient {
-    background: linear-gradient(135deg, #1a202c 0%, #2b6cb0 50%, #1a202c 100%);
+    background: linear-gradient(135deg, #f8fafc 0%, #60a5fa 50%, #ffffff 100%);
   }
 
   .metallic-text {
-    background: linear-gradient(135deg, #a0aec0 0%, #f7fafc 50%, #a0aec0 100%);
+    background: linear-gradient(135deg, #64748b 0%, #334155 50%, #1e293b 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
